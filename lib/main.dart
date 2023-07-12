@@ -125,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: Align(
         alignment: Alignment.bottomCenter,
-        child: Container(
+        child: SizedBox(
           height: 100,
           width: 50,
           child: FittedBox(

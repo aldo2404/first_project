@@ -14,10 +14,10 @@ class GridViewTreailState extends State<GridViewTreail> {
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
         centerTitle: true,
-        title: Text("GirdView"),
+        title: const Text("GirdView"),
       ),
       body: GridView.custom(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
             crossAxisSpacing: 10,
@@ -26,7 +26,7 @@ class GridViewTreailState extends State<GridViewTreail> {
         childrenDelegate: SliverChildListDelegate([
           Container(
             color: Colors.amberAccent,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
@@ -36,8 +36,8 @@ class GridViewTreailState extends State<GridViewTreail> {
             ),
           ),
           Container(
-            color: Color.fromARGB(255, 207, 242, 166),
-            child: Column(
+            color: const Color.fromARGB(255, 207, 242, 166),
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("service data"),
@@ -45,7 +45,7 @@ class GridViewTreailState extends State<GridViewTreail> {
             ),
           ),
           Container(
-            color: Color.fromARGB(255, 251, 221, 111),
+            color: const Color.fromARGB(255, 251, 221, 111),
             child: Column(
               children: [
                 Row(
@@ -54,7 +54,7 @@ class GridViewTreailState extends State<GridViewTreail> {
                     IconButton(
                         constraints: const BoxConstraints(),
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.mode_edit_outline,
                           size: 22,
                         ))

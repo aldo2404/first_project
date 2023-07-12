@@ -7,6 +7,7 @@ class MultiSelectDropdown<T> extends StatefulWidget {
   final void Function(T?)? onChanged;
 
   MultiSelectDropdown({
+    super.key,
     required this.options,
     required this.selectedValues,
     required this.hintText,
@@ -14,10 +15,10 @@ class MultiSelectDropdown<T> extends StatefulWidget {
   });
 
   @override
-  _MultiSelectDropdownState<T> createState() => _MultiSelectDropdownState<T>();
+  MultiSelectDropdownState<T> createState() => MultiSelectDropdownState<T>();
 }
 
-class _MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
+class MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
   List<T> _selectedValues = [];
 
   @override
@@ -64,11 +65,16 @@ void main() {
 
 class MyApp extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
-  List<String> _options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+class MyAppState extends State<MyApp> {
+  final List<String> _options = [
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4'
+  ];
   List<String> _selectedValues = [];
 
   @override
@@ -80,11 +86,11 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Multi-Selection Dropdown'),
+          title: const Text('Multi-Selection Dropdown'),
         ),
         body: Center(
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: MultiSelectDropdown<String>(
               options: _options,
               selectedValues: _selectedValues,
@@ -99,9 +105,9 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            print('Selected Values: $_selectedValues');
+            //print('Selected Values: $_selectedValues');
           },
-          child: Icon(Icons.check),
+          child: const Icon(Icons.check),
         ),
       ),
     );
